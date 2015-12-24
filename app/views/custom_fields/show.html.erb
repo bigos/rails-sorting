@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Belongs to table:</strong>
+  <%= @custom_field.belongs_to_table %>
+</p>
+
+<p>
+  <strong>Table record:</strong>
+  <%= @custom_field.table_record_id %>
+</p>
+
+<p>
+  <strong>Value string:</strong>
+  <%= @custom_field.value_string %>
+</p>
+
+<p>
+  <strong>Value integer:</strong>
+  <%= @custom_field.value_integer %>
+</p>
+
+<p>
+  <strong>Value boolean:</strong>
+  <%= @custom_field.value_boolean %>
+</p>
+
+<p>
+  <strong>Value text:</strong>
+  <%= @custom_field.value_text %>
+</p>
+
+<p>
+  <strong>Value decimal:</strong>
+  <%= @custom_field.value_decimal %>
+</p>
+
+<p>
+  <strong>Custom field definition:</strong>
+  <%= @custom_field.custom_field_definition_id %>
+</p>
+
+<%= link_to 'Edit', edit_custom_field_path(@custom_field) %> |
+<%= link_to 'Back', custom_fields_path %>

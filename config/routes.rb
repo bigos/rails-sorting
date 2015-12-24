@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :custom_fields
+
+  resources :custom_field_definitions
+
+  resources :products
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

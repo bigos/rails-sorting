@@ -1,0 +1,39 @@
+<h1>Listing custom_fields</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Belongs to table</th>
+      <th>Table record</th>
+      <th>Value string</th>
+      <th>Value integer</th>
+      <th>Value boolean</th>
+      <th>Value text</th>
+      <th>Value decimal</th>
+      <th>Custom field definition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @custom_fields.each do |custom_field| %>
+      <tr>
+        <td><%= custom_field.belongs_to_table %></td>
+        <td><%= custom_field.table_record_id %></td>
+        <td><%= custom_field.value_string %></td>
+        <td><%= custom_field.value_integer %></td>
+        <td><%= custom_field.value_boolean %></td>
+        <td><%= custom_field.value_text %></td>
+        <td><%= custom_field.value_decimal %></td>
+        <td><%= custom_field.custom_field_definition_id %></td>
+        <td><%= link_to 'Show', custom_field %></td>
+        <td><%= link_to 'Edit', edit_custom_field_path(custom_field) %></td>
+        <td><%= link_to 'Destroy', custom_field, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Custom field', new_custom_field_path %>

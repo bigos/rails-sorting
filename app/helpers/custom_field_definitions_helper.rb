@@ -1,0 +1,2 @@
+module CustomFieldDefinitionsHelper
+end

@@ -1,0 +1,49 @@
+<%= form_for(@custom_field_definition) do |f| %>
+  <% if @custom_field_definition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@custom_field_definition.errors.count, "error") %> prohibited this custom_field_definition from being saved:</h2>
+
+      <ul>
+      <% @custom_field_definition.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :belongs_to_table %><br>
+    <%= f.text_field :belongs_to_table %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :field_type %><br>
+    <%= f.text_field :field_type %>
+  </div>
+  <div class="field">
+    <%= f.label :default_string %><br>
+    <%= f.text_field :default_string %>
+  </div>
+  <div class="field">
+    <%= f.label :default_integer %><br>
+    <%= f.text_field :default_integer %>
+  </div>
+  <div class="field">
+    <%= f.label :default_boolean %><br>
+    <%= f.text_field :default_boolean %>
+  </div>
+  <div class="field">
+    <%= f.label :default_text %><br>
+    <%= f.text_field :default_text %>
+  </div>
+  <div class="field">
+    <%= f.label :default_decimal %><br>
+    <%= f.text_field :default_decimal %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

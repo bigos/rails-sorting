@@ -1,0 +1,49 @@
+<%= form_for(@custom_field) do |f| %>
+  <% if @custom_field.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@custom_field.errors.count, "error") %> prohibited this custom_field from being saved:</h2>
+
+      <ul>
+      <% @custom_field.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :belongs_to_table %><br>
+    <%= f.text_field :belongs_to_table %>
+  </div>
+  <div class="field">
+    <%= f.label :table_record_id %><br>
+    <%= f.text_field :table_record_id %>
+  </div>
+  <div class="field">
+    <%= f.label :value_string %><br>
+    <%= f.text_field :value_string %>
+  </div>
+  <div class="field">
+    <%= f.label :value_integer %><br>
+    <%= f.text_field :value_integer %>
+  </div>
+  <div class="field">
+    <%= f.label :value_boolean %><br>
+    <%= f.text_field :value_boolean %>
+  </div>
+  <div class="field">
+    <%= f.label :value_text %><br>
+    <%= f.text_field :value_text %>
+  </div>
+  <div class="field">
+    <%= f.label :value_decimal %><br>
+    <%= f.text_field :value_decimal %>
+  </div>
+  <div class="field">
+    <%= f.label :custom_field_definition_id %><br>
+    <%= f.text_field :custom_field_definition_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

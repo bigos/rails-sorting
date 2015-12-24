@@ -1,0 +1,39 @@
+<h1>Listing custom_field_definitions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Belongs to table</th>
+      <th>Name</th>
+      <th>Field type</th>
+      <th>Default string</th>
+      <th>Default integer</th>
+      <th>Default boolean</th>
+      <th>Default text</th>
+      <th>Default decimal</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @custom_field_definitions.each do |custom_field_definition| %>
+      <tr>
+        <td><%= custom_field_definition.belongs_to_table %></td>
+        <td><%= custom_field_definition.name %></td>
+        <td><%= custom_field_definition.field_type %></td>
+        <td><%= custom_field_definition.default_string %></td>
+        <td><%= custom_field_definition.default_integer %></td>
+        <td><%= custom_field_definition.default_boolean %></td>
+        <td><%= custom_field_definition.default_text %></td>
+        <td><%= custom_field_definition.default_decimal %></td>
+        <td><%= link_to 'Show', custom_field_definition %></td>
+        <td><%= link_to 'Edit', edit_custom_field_definition_path(custom_field_definition) %></td>
+        <td><%= link_to 'Destroy', custom_field_definition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Custom field definition', new_custom_field_definition_path %>
