@@ -3,6 +3,10 @@
 ** Example
 This is an example of my sql sorting problem for the Stack Overflow question.
 
+the data can be found in the following file:
+
+https://github.com/bigos/rails-sorting/blob/master/db/development.sqlite3
+
 ** The query
 
 #+BEGIN_SRC sql
