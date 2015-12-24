@@ -5,6 +5,7 @@ This is an example of my sql sorting problem for the Stack Overflow question.
 
 ** The query
 
+src_sql{
 SELECT  products.*, case when
 (select custom_fields.value_string
         from custom_fields
@@ -20,11 +21,14 @@ then (select custom_fields.value_string from custom_fields where custom_fields.c
              and custom_fields.table_record_id = products.id and custom_fields.belongs_to_table = 'product')
 end as sorted
 from products
-order by sorted
+order by sorted;
+}
 
 ** The results
 
+src_sql{
 1|orange|fruit|2015-12-24 18:11:44.610050|2015-12-24 18:11:44.610050|fruits of the world
 2|onions|veg|2015-12-24 18:11:54.977313|2015-12-24 18:11:54.977313|stopped
 3|carrots|veg|2015-12-24 18:12:12.589968|2015-12-24 18:12:12.589968|stopped
 4|cola|drink|2015-12-24 18:12:28.080403|2015-12-24 18:12:28.080403|stopped
+}
