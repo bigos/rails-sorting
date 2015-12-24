@@ -8,7 +8,14 @@
 </head>
 <body>
 
-<%= yield %>
+  <%= yield %>
 
+  <p>
+    <ul>
+      <li><%= link_to 'products', products_path %></li>
+      <li><%= link_to 'custom fields', custom_fields_path %></li>
+      <li><%= link_to 'custom field definitions', custom_field_definitions_path %></li>
+    </ul>
+  </p>
 </body>
 </html>
