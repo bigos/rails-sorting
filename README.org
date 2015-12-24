@@ -36,3 +36,9 @@ order by sorted;
 3|carrots|veg|2015-12-24 18:12:12.589968|2015-12-24 18:12:12.589968|stopped
 4|cola|drink|2015-12-24 18:12:28.080403|2015-12-24 18:12:28.080403|stopped
 #+END_SRC
+
+
+** My question
+
+How do I properly sort products by associated custom fields using default values where necessary?
+Can it be translated to Arel?
